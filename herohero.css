@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    height: 100vh;
+    margin: 0;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;;
+}
+
+
+.hamburger-img, .white-hamburger-img {
+    width: 30px;
+    display: none;
+}
+
+
+@media (max-width: 908px) {
+    .navigationlinks, .login-cta, .hidden-white-profile, .signup-button, .hidden-white-signup-button {
+        display: none !important;
+    }
+
+    .hamburger-img {
+        display: inline-block;
+    }
+
+    .scrolled-navbar .white-hamburger-img {
+        display: inline-block;
+    }
+    .scrolled-navbar .hamburger-img {
+        display: none;
+    }
+}
+
+
+.display-hamburger-img {
+    display: inline-block;
+}
+
+.navigationbar {
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: ease 0.3s;
+}
+
+
+
+
+
+
+
+
+.navigationbar-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style-type: none;
+    padding-top: 20px;
+    box-shadow: -10px 0px 10px (0, 0, 0, 0,1);
+    border-left: 2px solid #e0e0e0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navigationbar-sidebar ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px;
+} 
+
+.navigationbar-sidebar li {
+    height: 50px
+}
+
+.navigationbar-sidebar a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.cross-icon-img {
+    width: 38px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.displaymobilenavbar {
+    display: flex;
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+.scrolled-navbar {
+    background: white;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navlinks {
+    color: #fff;
+    text-decoration: none;
+    margin: 0px 20px;
+    font-weight: 500;
+    font-size: 18px; 
+}
+
+.navigationlinks-white {
+    color: #333;
+}
+
+.left-side {
+    justify-content: left;
+    margin-left: 15px;
+}
+
+.logo-img {
+    width: 34px;
+}
+
+.hided-white-logo-img {
+    display: none;
+    width: 44px;
+    margin-left: -4px;
+}
+
+.white-logo-img {
+    display: inline-block;
+}
+
+.hided-logo-img {
+    display: none;
+}
+
+.logo-container {
+    margin: 0px 25px;
+}
+
+
+.logo-container,
+.navigationlinks {
+    display: inline-block;
+    vertical-align: middle;   
+}
+
+.navigationlinks a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 15px 25px;
+    border-radius: 40px;
+}
+
+.right-side {
+    justify-content: right;
+    margin-right: 25px;
+}
+
+.ctas {
+    justify-content: space-between;
+}
+
+.signup-button,
+.login-cta,
+.profile-img {
+    display: inline-block;
+}
+
+.signup-button {
+    background-color: white;
+    font-weight: 500;
+    color: #000;
+    border: 50px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    margin-left: 25px;
+    transition: linear 0.3s;
+}
+
+.hidden-signup-button {
+    display: none;
+}
+
+.signup-button:hover {
+    background-color: #ff7749;
+    color: white;
+}
+
+.hidden-white-signup-button {
+    display: none;
+    background-color: #333;
+    font-weight: 500;
+    color: #fff;
+    border: 50px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    margin-left: 25px;
+    transition: linear 0.3s;
+}
+
+.hidden-white-signup-button:hover {
+    background-color: #ff7749;
+    color: white;
+}
+
+.display-white-signup-button {
+    display: inline-block;
+}
+
+
+
+
+.login-cta {
+    color: white;
+    font: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: linear 0.1s;
+}
+
+.login-cta:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px 18px 8px 16px;
+    border-radius: 30px;
+}
+
+.hidden-login-cta {
+    display: none;
+}
+
+.profile-img {
+    width: 32px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.white-profile-img {
+    width: 32px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.hidden-white-profile {
+    display: none;
+    color: #333;
+    font: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: linear 0.1s;
+}
+
+.white-profile {
+    display: inline-block;
+}
+
+.white-profile:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px 18px 8px 16px;
+    border-radius: 30px;
+}
+
+
+
+
+.herohero {
+    height: 100vh;
+    background-image: url('images/hero-img.png');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat; 
+}
+
+
+
+
+
+.hero-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+
+}
+
+.main-text {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-text h1 {
+    font-weight: 300;
+    font-family: 'Lora', sans-serif;
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.main-text p {
+    color: #fff;
+    font-family: 'Lora', sans-serif;
+    font-size: 22px;
+}
+
+.main-cta-btn {
+    background-color: #ff7749;
+    font-weight: 500;
+    border: rgba(255, 255, 255, 0.4) solid 1.5px;
+    cursor: pointer;
+    padding: 16px 50px;
+    font-size: 20px;
+    border-radius: 50px;
+
+    backdrop-filter: blur(10px); 
+    color: #fff;
+    cursor: pointer;
+    transition: ease 0.2s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-decoration: none;
+}
+
+.main-cta-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherits the button's background */
+    filter: blur(200px); /* Additional blur for depth */
+    z-index: -1; /* Behind the content */
+    border-radius: 12px;
+}
+
+.main-container-cta-text {
+    display: block;
+    text-align: center;
+}
+
+
+
+
+
+
+.rockps-cntr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 20px;
+    height: 70vh;
+}
+
+.container {
+    border-radius: 20px;
+    padding: 50px 20px 50px 20px;
+    background-color: #e0e0e0;
+    width: 700px;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.play-btn {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+    background-color: #ff7449;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.4s linear 0.2s;
+    margin-bottom: 10px;
+
+}
+
+.play-btn:hover {
+    background-color: #333; 
+}
+
+.reset-btn {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+}
+
+.result,
+.score {
+    margin: 30px 10px;
+    font-size: 18px;
+}
+
+.title {
+    font-family: 'Lora', sans-serif;
+    font-size: 36px;
+    color: #333;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+span {
+    font-style: italic;
+}
+
+
+
+
+
+.containerr {
+    border-radius: 20px;
+    padding: 50px 20px 50px 20px;
+    background-color: #e0e0e0;
+    width: 600px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.coinflip-super-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px 20px 20px;
+    height: 70vh;
+}
+
+.css-result,
+.scoree {
+    margin: 30px 10px;
+    font-size: 18px;
+}
+
+
+
+
+.cancel-game-cross {
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+}
+
+.show-cancel-game-cross {
+    display: block;
+}
+
+
+
+.cancel-game-cross-2 {
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+}
+
+.show-cancel-game-cross-2 {
+    display: block;
+}
+
+
+
+
+.containerrr {
+    border-radius: 20px;
+    padding: 50px 40px 50px 40px;
+    background-color: #e0e0e0;
+    width: 600px;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.add-notes-super-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px 20px 20px;
+    min-height: 70vh;    /* minstens schermhoogte, maar groeit als het moet */
+    overflow-y: auto;
+}
+
+.inputname,
+.ddinput {
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: solid #333 2px;
+    font-size: 14px;
+}
+
+.inputname:focus,
+.ddinput:focus {
+    outline: blue;
+}
+
+.inputname::placeholder,
+.ddinput::placeholder {
+    font-size: 14px;
+    color: gray;
+    font-family: 'Poppins';
+}
+
+.input-grid {
+    gap: 20px;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .input-grid {
+        flex-direction: column;
+        
+    }
+}
+
+.todo-grid,
+.input-grid {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-grid {
+    margin-bottom: 10px;
+    align-items: stretch;
+}
+
+.add-btn {
+    background-color: #ff7449;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.delete-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
